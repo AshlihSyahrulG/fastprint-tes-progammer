@@ -1,5 +1,6 @@
 const {Product , Category, Status } = require ("../models/index");
 
+
 class Controller{
     static async createProduct ( req, res, next) {
         try {
@@ -15,8 +16,9 @@ class Controller{
 
     static async readProduct ( req , res, next){
         try {
-            const product = await Product.findAll({
-                include : [Category,Status]
+            const product = await Product.findAll({ 
+                where:{ status_id: 1 },
+                include : [Status,Category]
             })
             res.status(200).json(product)
         } catch (error) {

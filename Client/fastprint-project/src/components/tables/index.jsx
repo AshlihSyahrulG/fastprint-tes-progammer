@@ -265,7 +265,7 @@ export const CustomTable = ({
             <div className="flex gap-2 items-center">
               <span className="text-gray-400">Row per page</span>
               <button className="flex items-center">
-                <span className="font-bold">10</span>
+                <span className="font-bold">30</span>
                 <HiOutlineChevronUpDown />
               </button>
             </div>
